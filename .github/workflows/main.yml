@@ -26,6 +26,4 @@ jobs:
         with:
           name: Test Stack Creation
           template: my_local_template.yml
-          parameter-overrides: >-
-            KeyName="atl-key"
         
