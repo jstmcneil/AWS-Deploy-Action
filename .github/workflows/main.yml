@@ -34,5 +34,5 @@ jobs:
         with:
           name: Testing-EC2-Stack
           template: my_local_template.yml
-          parameter-overrides: "KeyPair=${{ github.event.inputs.keypair }}"
+          parameter-overrides: "KeyName=${{ github.event.inputs.keypair }}"
         
