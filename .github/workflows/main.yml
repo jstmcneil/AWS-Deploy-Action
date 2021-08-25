@@ -27,5 +27,5 @@ jobs:
           name: Test Stack Creation
           template: my_local_template.yml
           parameter-overrides: >-
-            KeyName=${{ github.event.inputs.keypair }}
+            KeyName="atl-key"
         
