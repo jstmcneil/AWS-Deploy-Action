@@ -30,8 +30,8 @@ jobs:
           ENVIRONMENT=`echo $REPO | tr "/" "-"`
           echo "Environment name: $ENVIRONMENT"
           echo "::set-output name=environment::$ENVIRONMENT"
-      - name: Deploy Amazon EKS Cluster
-        uses: aws-actions/aws-cloudformation-github-deploy@master
+      - name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions
+        uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
         with:
           name: ${{ steps.env-name.outputs.environment }}-instance
           template: my_local_template.yml
