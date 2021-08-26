@@ -15,6 +15,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Get Private Action
+        id: action-get
+        uses: actions/checkout@v2
+        with:
+          repository: jstmcneil/Policy-as-Code-Action
+          persist-credentials: false
+          path: ./.github/actions/Policy-as-Code
+      - name: Docker CFN Step
+        id: docker-cfn
+        uses: ./.github/actions/Policy-as-Code
+        with:
+          rule-file-name: 'ruleset_migrated.guard'
+          app_CI_key: 'TES'
+          ms-teams-webhook: ''
+          color_style: 'dark'
       - uses: aws-actions/configure-aws-credentials@v1
         id: creds
         with:
