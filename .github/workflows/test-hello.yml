@@ -13,7 +13,7 @@ jobs:
         id: hello
         uses: jstmcneil/javascript-action-attach-git@1.1
         with:
-          template-name: ${{ inputs.template }}
+          template-name: ${{ github.event.inputs.template }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
