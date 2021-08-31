@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: jstmcneil/javascript-action-attach-git@1.1
+        uses: jstmcneil/javascript-action-attach-git@1.2
         with:
           template-name: ${{ github.event.inputs.template }}
       # Use the output from the `hello` step
