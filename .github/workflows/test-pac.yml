@@ -1,1 +1,21 @@
+# This workflow is a template for working with an aws managed repository
 
+name: Polic-as-Code Public Test
+
+# Controls when the action will run. Triggers the workflow on push request
+# events but only for the non-master branch
+on:
+  workflow_dispatch:
+jobs:
+  IntialAction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: CloudFormation Guard Check
+        id: docker-cfn
+        uses: jstmcneil/Policy-as-Code-Action@2.0
+        with:
+          rule-file-name: 'ruleset_migrated.guard'
+          app_CI_key: 'TES'
+          ms-teams-webhook: ''
+          color_style: 'dark'
