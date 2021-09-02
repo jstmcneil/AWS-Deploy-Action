@@ -9,7 +9,7 @@ on:
       description: 'SSH Key Pair'
       required: true
 jobs:
-  IntialAction:
+  CFN-Deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
