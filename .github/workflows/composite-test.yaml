@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: CloudFormation Guard Check
         id: docker-cfn
-        uses: jstmcneil/PaC-CFN-Deploy@1.95
+        uses: jstmcneil/PaC-CFN-Deploy@1.96
         with:
           name: Testing-EC2-Stack-2
           rule-file-name: 'ruleset_migrated.guard'
