@@ -17,6 +17,7 @@ jobs:
         id: docker-cfn
         uses: jstmcneil/PaC-CFN-Deploy@1.2
         with:
+          name: Testing-EC2-Stack
           rule-file-name: 'ruleset_migrated.guard'
           app_CI_key: 'TES'
           ms-teams-webhook: ''
